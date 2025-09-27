@@ -1,7 +1,7 @@
 name: Deploy to Server
 on:
   push:
-    branches: ["main"]
+    branches: ["master"]
 
 jobs:
   deploy:
@@ -15,5 +15,5 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             cd /var/www/hello-world
-            git fetch origin main
-            git reset --hard origin/main
+            git fetch origin master
+            git reset --hard origin/master
